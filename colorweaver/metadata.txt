@@ -5,12 +5,12 @@
 [general]
 name=Colorweaver
 qgisMinimumVersion=3.0
-description=Multivariate choropleths from spatial patterns, not blended colours
-version=0.1.4
+description=Multivariate choropleths using spatial patterns, not blended colours
+version=0.1.5
 author=Luke Bergmann and David O'Sullivan
 email=luke.bergmann@gmail.com
 
-about=Multivariate choropleths from spatial patterns, not blended colours
+about=Multivariate choropleths using spatial patterns, not blended colours
 
 tracker=https://github.com/FoldingSpace/colorweaver/issues
 repository=https://github.com/FoldingSpace/colorweaver
@@ -37,7 +37,7 @@ deprecated=False
 # Since QGIS 3.8, a comma separated list of plugins to be installed
 # (or upgraded) can be specified.
 # Check the documentation for more information.
-# plugin_dependencies=mmqgis
+plugin_dependencies=mmqgis
 
 Category of the plugin: Raster, Vector, Database or Web
 # category=
