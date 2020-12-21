@@ -24,6 +24,7 @@
 from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication
 from qgis.PyQt.QtGui import QIcon
 from qgis.PyQt.QtWidgets import QAction
+from qgis.core import QgsProject
 
 # Initialize Qt resources from file resources.py
 from .resources import *
@@ -189,9 +190,17 @@ class colorweaver:
             self.first_start = False
             self.dlg = colorweaverDialog()
 
+        # Fetch the currently loaded layers
+        layers = QgsProject.instance().layerTreeRoot().children()
+        # Clear the contents of the comboBox from previous runs
+        self.dlg.datasource_comboBox.clear()
+        # Populate the comboBox with names of all the loaded layers
+        self.dlg.datasource_comboBox.addItems([layer.name() for layer in layers])
+
         # show the dialog
         self.dlg.show()
         # Run the dialog event loop
+
         result = self.dlg.exec_()
         # See if OK was pressed
         if result:
