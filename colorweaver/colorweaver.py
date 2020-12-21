@@ -197,6 +197,9 @@ class colorweaver:
         # Populate the comboBox with names of all the loaded layers
         self.dlg.datasource_comboBox.addItems([layer.name() for layer in layers])
 
+        self.dlg.tilesource_comboBox.clear()
+        self.dlg.tilesource_comboBox.addItems([layer.name() for layer in layers])
+
         # show the dialog
         self.dlg.show()
         # Run the dialog event loop
