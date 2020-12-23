@@ -191,14 +191,13 @@ class colorweaver:
             self.dlg = colorweaverDialog()
 
         # Fetch the currently loaded layers
-        layers = QgsProject.instance().layerTreeRoot().children()
+        #layers = QgsProject.instance().layerTreeRoot().children()
         # Clear the contents of the comboBox from previous runs
-        self.dlg.datasource_comboBox.clear()
+        #self.dlg.datasource_comboBox.clear()
         # Populate the comboBox with names of all the loaded layers
-        self.dlg.datasource_comboBox.addItems([layer.name() for layer in layers])
-
-        self.dlg.tilesource_comboBox.clear()
-        self.dlg.tilesource_comboBox.addItems([layer.name() for layer in layers])
+        #self.dlg.datasource_comboBox.addItems([layer.name() for layer in layers])
+        #self.dlg.tilesource_comboBox.clear()
+        #self.dlg.tilesource_comboBox.addItems([layer.name() for layer in layers])
 
         # show the dialog
         self.dlg.show()

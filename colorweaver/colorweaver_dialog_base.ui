@@ -29,22 +29,12 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QComboBox" name="datasource_comboBox">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>20</y>
-     <width>241</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="datasource_label">
    <property name="geometry">
     <rect>
      <x>30</x>
      <y>20</y>
-     <width>301</width>
+     <width>171</width>
      <height>21</height>
     </rect>
    </property>
@@ -61,8 +51,8 @@
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>50</y>
-     <width>301</width>
+     <y>60</y>
+     <width>131</width>
      <height>21</height>
     </rect>
    </property>
@@ -73,16 +63,6 @@
    </property>
    <property name="text">
     <string>Tesselation tile source:</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="tilesource_comboBox">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>50</y>
-     <width>241</width>
-     <height>22</height>
-    </rect>
    </property>
   </widget>
   <widget class="QLabel" name="outputfile_label_">
@@ -121,12 +101,37 @@
     <enum>QgsFileWidget::SaveFile</enum>
    </property>
   </widget>
+  <widget class="QgsMapLayerComboBox" name="datasource_mMapLayerComboBox">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>20</y>
+     <width>241</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QgsMapLayerComboBox" name="tilesource_mMapLayerComboBox">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>60</y>
+     <width>241</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <customwidgets>
   <customwidget>
    <class>QgsFileWidget</class>
    <extends>QWidget</extends>
    <header>qgsfilewidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QgsMapLayerComboBox</class>
+   <extends>QComboBox</extends>
+   <header>qgsmaplayercombobox.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
