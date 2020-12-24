@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>472</width>
-    <height>412</height>
+    <width>443</width>
+    <height>459</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,11 +16,16 @@
   <widget class="QDialogButtonBox" name="button_box">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>370</y>
+     <x>260</x>
+     <y>410</y>
      <width>161</width>
      <height>32</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
@@ -32,9 +37,9 @@
   <widget class="QLabel" name="datasource_label">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>171</width>
+     <x>20</x>
+     <y>6</y>
+     <width>151</width>
      <height>21</height>
     </rect>
    </property>
@@ -44,15 +49,18 @@
     </font>
    </property>
    <property name="text">
-    <string>Multivariate map data source:</string>
+    <string>Multivariate map data</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="tilesource_label">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>60</y>
-     <width>131</width>
+     <x>20</x>
+     <y>84</y>
+     <width>111</width>
      <height>21</height>
     </rect>
    </property>
@@ -62,15 +70,18 @@
     </font>
    </property>
    <property name="text">
-    <string>Tesselation tile source:</string>
+    <string>Tesselation tiles</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="outputfile_label_">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>320</y>
-     <width>301</width>
+     <x>20</x>
+     <y>370</y>
+     <width>61</width>
      <height>21</height>
     </rect>
    </property>
@@ -80,15 +91,18 @@
     </font>
    </property>
    <property name="text">
-    <string>Output file:</string>
+    <string>Output file</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QgsFileWidget" name="outputfile_mQgsFileWidget">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>320</y>
-     <width>241</width>
+     <x>90</x>
+     <y>370</y>
+     <width>331</width>
      <height>27</height>
     </rect>
    </property>
@@ -104,9 +118,9 @@
   <widget class="QgsMapLayerComboBox" name="datasource_mMapLayerComboBox">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>20</y>
-     <width>241</width>
+     <x>140</x>
+     <y>30</y>
+     <width>271</width>
      <height>27</height>
     </rect>
    </property>
@@ -114,11 +128,245 @@
   <widget class="QgsMapLayerComboBox" name="tilesource_mMapLayerComboBox">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>60</y>
-     <width>241</width>
+     <x>140</x>
+     <y>110</y>
+     <width>271</width>
      <height>27</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="resize_button_KeepOriginal">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>147</y>
+     <width>151</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Keep original size</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="resize_button_ScaleFactor">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>173</y>
+     <width>141</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Scale by factor</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="scale_of_tiles_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>146</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Scale of tesselation tiles</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::PlainText</enum>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="resize_ScaleFactor">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>190</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="maximum">
+    <double>10000000000000000905969664.000000000000000</double>
+   </property>
+   <property name="value">
+    <double>1.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="resize_Xdomain_repetitions">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>250</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="decimals">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <double>10000000000000000905969664.000000000000000</double>
+   </property>
+   <property name="value">
+    <double>100.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="resize_button_Xdomain_repetitions">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>230</y>
+     <width>271</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Number of repetitions horizontally across data set</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="tilesource_label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Source</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="datasource_label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Source</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="resize_Xdomain_to_given_size">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>310</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="decimals">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <double>10000000000000000905969664.000000000000000</double>
+   </property>
+   <property name="value">
+    <double>10000.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="resize_button_Xdomain_to_given_size">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>290</y>
+     <width>271</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Resize tiles proportionally so they are...</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="tiles_mapwidth_label">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>310</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>map units in width.</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::PlainText</enum>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
  </widget>

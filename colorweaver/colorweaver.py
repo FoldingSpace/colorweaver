@@ -181,6 +181,14 @@ class colorweaver:
             self.iface.removeToolBarIcon(action)
 
 
+    # #def get_tile_labels(tilelayer):
+    # #    values = set()
+    #     for feature in tilelayer.getFeatures():
+    #         values.add(feature['label'])
+    #     print(values)
+    #     self.dlg.datasource_comboBox.clear()
+
+
     def run(self):
         """Run method that performs all the real work"""
 
@@ -198,14 +206,36 @@ class colorweaver:
         #self.dlg.datasource_comboBox.addItems([layer.name() for layer in layers])
         #self.dlg.tilesource_comboBox.clear()
         #self.dlg.tilesource_comboBox.addItems([layer.name() for layer in layers])
+        #tilesource_mMapLayerComboBox.layerChanged.connect(tile_labels)
+        # dialog.resize(600, 400)
+        # https://stackoverflow.com/questions/30457935/pyqt4-adding-combobox-in-qtableview
+        # https://webgeodatavore.github.io/pyqgis-samples/gui-group/QgsAttributeTableView.html
+
 
         # show the dialog
+        tilescaleQGroupBox = qgis.PyQt.QtGui.QGroupBox()
+        self.dlg.resize_button_Xdomain_to_given_size.addWidget(tilescaleQGroupBox)
+        self.dlg.resize_button_Xdomain_repetitions.addWidget(tilescaleQGroupBox)
+        self.dlg.resize_button_ScaleFactor.addWidget(tilescaleQGroupBox)
+        self.dlg.resize_button_KeepOriginal.addWidget(tilescaleQGroupBox)
+
         self.dlg.show()
         # Run the dialog event loop
+
 
         result = self.dlg.exec_()
         # See if OK was pressed
         if result:
             # Do something useful here - delete the line containing pass and
             # substitute with your code.
+            #
+            # if self.dlg.resize_button_Xdomain_to_given_size.isChecked():
+            #
+            # elif self.dlg.resize_button_Xdomain_repetitions.isChecked():
+            #
+            # elif self.dlg.resize_button_ScaleFactor.isChecked():
+            #
+            # elif self.dlg.resize_button_KeepOriginal.isChecked():
+            #
+            # else:
             pass

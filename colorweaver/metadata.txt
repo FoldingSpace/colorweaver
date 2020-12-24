@@ -27,7 +27,7 @@ tags=python, bivariate choropleth, mapping
 
 homepage=https://github.com/FoldingSpace/colorweaver
 category=Vector
-icon=icon.png
+icon=colorweaver_icon.png
 # experimental flag
 experimental=True
 
