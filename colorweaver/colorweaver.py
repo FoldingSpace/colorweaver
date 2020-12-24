@@ -23,6 +23,7 @@
 """
 from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication
 from qgis.PyQt.QtGui import QIcon
+from qgis.PyQt.QtGui import QGroupBox
 from qgis.PyQt.QtWidgets import QAction
 from qgis.core import QgsProject
 
@@ -213,7 +214,7 @@ class colorweaver:
 
 
         # show the dialog
-        tilescaleQGroupBox = qgis.PyQt.QtGui.QGroupBox()
+        tilescaleQGroupBox = QGroupBox()
         self.dlg.resize_button_Xdomain_to_given_size.addWidget(tilescaleQGroupBox)
         self.dlg.resize_button_Xdomain_repetitions.addWidget(tilescaleQGroupBox)
         self.dlg.resize_button_ScaleFactor.addWidget(tilescaleQGroupBox)

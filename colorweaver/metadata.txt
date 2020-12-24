@@ -6,7 +6,7 @@
 name=Colorweaver
 qgisMinimumVersion=3.0
 description=Multivariate choropleths using spatial patterns, not blended colours
-version=0.1.9
+version=0.1.10
 author=Luke Bergmann and David O'Sullivan
 email=luke.bergmann@gmail.com
 
